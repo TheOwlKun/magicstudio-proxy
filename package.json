@@ -1,0 +1,41 @@
+{
+    "name": "magicstudio-proxy",
+    "version": "2.0.0",
+    "description": "High-Performance Image Generation API (OpenAI Compatible)",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "start:prod": "pm2 start ecosystem.config.js",
+        "stop": "pm2 stop image-gen-api",
+        "restart": "pm2 restart image-gen-api",
+        "logs": "pm2 logs image-gen-api",
+        "dev": "node src/server.js",
+        "test": "jest",
+        "lint": "eslint src/**/*.js",
+        "format": "prettier --write src/**/*.js"
+    },
+    "keywords": [
+        "openai",
+        "image-generation",
+        "ai",
+        "flux-lora"
+    ],
+    "author": "Meeran Muzamil (@TheOwlKun)",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.6.5",
+        "cors": "^2.8.6",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-rate-limit": "^7.5.0",
+        "form-data": "^4.0.0",
+        "helmet": "^8.1.0",
+        "uuid": "^9.0.1",
+        "winston": "^3.11.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "jest": "^29.7.0",
+        "prettier": "^3.2.4"
+    }
+}
