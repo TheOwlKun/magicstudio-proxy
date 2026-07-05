@@ -6,13 +6,10 @@
     "scripts": {
         "start": "node src/server.js",
         "start:prod": "pm2 start ecosystem.config.js",
-        "stop": "pm2 stop image-gen-api",
-        "restart": "pm2 restart image-gen-api",
-        "logs": "pm2 logs image-gen-api",
-        "dev": "node src/server.js",
-        "test": "jest",
-        "lint": "eslint src/**/*.js",
-        "format": "prettier --write src/**/*.js"
+        "stop": "pm2 stop magicstudio-proxy",
+        "restart": "pm2 restart magicstudio-proxy",
+        "logs": "pm2 logs magicstudio-proxy",
+        "dev": "node src/server.js"
     },
     "keywords": [
         "openai",
@@ -32,10 +29,5 @@
         "helmet": "^8.1.0",
         "uuid": "^9.0.1",
         "winston": "^3.11.0"
-    },
-    "devDependencies": {
-        "eslint": "^8.56.0",
-        "jest": "^29.7.0",
-        "prettier": "^3.2.4"
     }
 }
