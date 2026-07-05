@@ -147,8 +147,26 @@ cp .env.example .env
 
 ## Run
 
+### Development
 ```bash
 npm run dev
+```
+
+### Production (Background Service)
+To run the proxy continuously in the background (even if you close your terminal or reboot), use the built-in PM2 ecosystem:
+
+```bash
+# 1. Install PM2 globally
+npm install -g pm2
+
+# 2. Start the proxy in the background
+npm run start:prod
+
+# 3. View live logs
+npm run logs
+
+# 4. Stop the proxy
+npm run stop
 ```
 
 ---
